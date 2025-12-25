@@ -18,7 +18,7 @@ export default function Index() {
         <Stack.Screen
           name="Search"
           component={SearchScreen}
-          options={{ title: 'Поиск игрока' }}
+          options={{ headerShown: false, title: 'Поиск игрока' }}
         />
         <Stack.Screen
           name="Player"

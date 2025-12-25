@@ -19,8 +19,8 @@ export async function searchPlayers(query) {
     return data.results.map((player) => ({
       id: player.id,
       name: player.name,
-      sport: 'Football', // API не возвращает вид спорта, можно зафиксировать
-      photo: `https://api.sportdb.dev/api/transfermarkt/player/photo/${player.id}`, // можно построить ссылку на фото
+      sport: 'Football',
+      photo: `https://api.sportdb.dev/api/transfermarkt/player/photo/${player.id}`,
       club: player.club?.name || '',
       position: player.position,
       age: player.age,
@@ -48,7 +48,6 @@ export async function getPlayerProfile(playerId) {
 
     const data = await response.json();
 
-    // Возвращаем только нужные поля
     return {
       id: data.id,
       name: data.name,

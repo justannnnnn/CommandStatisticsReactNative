@@ -24,7 +24,7 @@ export default function SearchScreen({ navigation }) {
       } else {
         setResults([]);
       }
-    }, 3000); // debounce 3 сек
+    }, 3000);
 
     setTimer(newTimer);
 
